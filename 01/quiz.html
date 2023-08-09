@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>4의 배수 일까 아닐까</h1>
+    <h1 id="result"></h1>
+    <script>
+        let num = prompt('4의 배수인지 아닌지 테스트') // C의 scanf java의 scanner python의 input('');
+        if((num % 4) == 0){
+            document.querySelector('#result').innerHTML = `<h1>${num}은 4의 배수입니다</h1>`;
+        }else{
+            document.querySelector('#result').innerHTML = `<h1>${num}은 4의 배수가 아닙니다</h1>`;
+        }
+        
+    </script>
+</body>
+</html>

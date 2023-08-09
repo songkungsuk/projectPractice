@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>3의 배수 찾기</h1>
+    <p id="count"></p>
+    <script>
+        let num = prompt('숫자를 입력하세요');
+        html = '';
+        for(let i = 3; i<num; i+=3){
+            html += ` ${i} `;
+        }
+        html += `<br> ${num} 까지의 3의 배수의 개수 ${Math.floor(num/3)}`
+        document.querySelector('#count').innerHTML = html;
+    </script>
+</body>
+</html>

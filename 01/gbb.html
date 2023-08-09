@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>가위바위보를 하자!</h1>
+    <button id="sissor">가위</button>
+    <button id="rock">바위</button>
+    <button id="paper">보</button>
+    <br>
+    <div id="message"></div>
+
+    <script>
+        let fight = Math.floor(Math.random() * 3); //0~2
+
+        sissor = document.querySelector('#sissor');//0
+        rock = document.querySelector('#rock');//1
+        paper = document.querySelector('#paper');//2
+        message = document.querySelector('#message');
+        console.log(fight);
+
+        sissor.onclick = function () {
+            if (fight == 0) {
+                message.innerHTML += `<h1>비겼어요</h1>`;
+            }
+            else if (fight == 1) {
+                message.innerHTML += `<h1>졌어요</h1>`;
+            }
+            else if (fight == 2) {
+                message.innerHTML += `<h1>이겼어요</h1>`;
+            }
+            fight = Math.floor(Math.random() * 3);
+            console.log(fight);
+        }
+        
+        rock.onclick = function () {
+            if (fight == 0) {
+                message.innerHTML += `<h1>이겼어요</h1>`;
+            }
+            else if (fight == 1) {
+                message.innerHTML += `<h1>비겼어요</h1>`;
+            }
+            else if (fight == 2) {
+                message.innerHTML += `<h1>졌어요</h1>`;
+            }
+            fight = Math.floor(Math.random() * 3);
+            console.log(fight);
+        }
+        
+        paper.onclick = function () {
+            if (fight == 0) {
+                message.innerHTML += `<h1>졌어요</h1>`;
+            }
+            else if (fight == 1) {
+                message.innerHTML += `<h1>이겼어요</h1>`;
+            }
+            else if (fight == 2) {
+                message.innerHTML += `<h1>비겼어요</h1>`;
+            }
+            fight = Math.floor(Math.random() * 3);
+            console.log(fight);
+        }
+
+
+    </script>
+</body>
+
+</html>

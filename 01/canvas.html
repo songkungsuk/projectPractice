@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            text-align: center;
+        }
+
+        canvas {
+            margin-top: 50px;
+
+            stroke: 1px solid black;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>테트리스 그래픽 그려보기</h1>
+    <canvas id="canvas1" height="400" width="360">This browser Doesn't support canvas</canvas>
+
+    <script>
+        let canvas = document.querySelector('#canvas1');
+        let canvas_width = canvas.getAttribute('width');
+        let canvas_height = canvas.getAttribute('height');
+        console.log(canvas_height);
+        console.log(canvas_width);
+        let context = canvas.getContext('2d');
+        context.fillStyle = "gray";
+
+        const borderWidth = 4;
+        const blocksize = 15.8;
+        //context.fillRect(0,0,150,100);
+        //context.fillText('hello oh my god what is this graphic so bad', 0, 100);
+        // context.lineTo(0,0,300,200);
+
+        for (let x = 0; x < 18; x++) {
+            for (let y = 0; y < 24; y++) {
+                context.fillRect(
+                    4+borderWidth*x+blocksize*x,
+                    4+borderWidth*y+blocksize*y,
+                    blocksize,
+                    blocksize
+                );
+            }
+        }
+        context.rect(0, 0, canvas_width, canvas_height);
+        context.stroke();
+
+
+    </script>
+</body>
+
+</html>

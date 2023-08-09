@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="clock" class="container" style="text-align: center;"></div>
+    <input type="text" placeholder="몇초 후에 알람?">
+    <button onclick="startTimer(this)" id="timer">시작</button>
+    <div style="display: block;">
+        <audio src="/하울의 움직이는 성.mp3" id="arlam" controls></audio>
+    </div>
+
+    <script>
+        function displayClock(){
+            const date = new Date();
+            document.querySelector('#clock').innerHTML = '<h1>' + date + '</h1>';
+        }
+        setInterval(displayClock, 1000);
+        function startTimer(btn){
+            if(btn.innerText === '시작'){
+                const timer = parseInt(document.querySelector('#timer').value) * 1000;
+                setTimeout(function(){
+                    document.querySelector('#arlam').play();
+                    btn.innerText = '알람끄기';
+                }, timer);
+            }else{
+                document.querySelector('#arlam').stop();
+                btn.innerText = '시작';
+            }
+        }
+        
+    </script>
+</body>
+</html>

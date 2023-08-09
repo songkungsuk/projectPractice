@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="return check()">
+        <input type="text" id="id" placeholder="id를입력해주세요">
+        <input type="text" id="pw" placeholder="pw를입력해주세요">
+        <button>로그인</button>
+    </form>
+
+    <script>
+        function check(){
+            const id = document.querySelector('#id');
+            const pw = document.querySelector('#pw');
+
+            if(id.value.trim().length < 0){
+                alert('id 4 upper plz');
+                id.focus();
+                return false;
+                
+            }
+            
+            if(pw.value.trim().length < 0){
+                alert('id 4 upper plz');
+                pw.focus();
+                return false;
+            }
+
+        }
+    </script>
+</body>
+</html>

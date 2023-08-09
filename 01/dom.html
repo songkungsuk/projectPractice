@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        안녕하세요
+        <button id="btn" onclick="count()">누르지마시오</button>
+        <div id="div2"></div>
+        <div id="div3"></div>
+    </div>
+    <script>
+        let button = document.querySelector('#btn');
+
+        let cnt = 0;
+        function count(){
+            cnt++;
+            button.innerHTML = cnt +'count';
+            document.querySelector('#div2').innerHTML = '<h1>' + 'Hello' +'</h1>';
+            document.querySelector('#div3').innerHTML = '<h1>' + 'Hello' +'</h1>';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="return check()">
+    <label for="h1">등산</label>
+    <input type="checkbox" id="h1" name="hobby">
+    <label for="h2">게임</label>
+    <input type="checkbox" id="h1" name="hobby">
+    <label for="h3">여행</label>
+    <input type="checkbox" id="h1" name="hobby">
+    <label for="h4">코딩</label>
+    <input type="checkbox" id="h1" name="hobby">
+    <button>취미 선택</button>
+    </form>
+    <script>
+        function check(){
+            document.getElementById('h1');
+            document.getElementsByName('hobby');
+            document.getElementsByTagName('input');
+            const hobbyObjs = document.querySelectorAll('[name = hobby]:checked');
+            if(hobbyObjs.length < 2){
+                alert('취미는 2개이상 선택해야합니다');
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

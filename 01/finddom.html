@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            text-align: center;
+        }
+
+        td {
+            width: 100px;
+            height: 100px;
+            color: crimson;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="create()">Create Table</button>
+    <table id="sample" border="3px">
+
+    </table>
+
+    <script>
+
+
+        function create() {
+
+            let html = '';
+            for (let i = 1; i < 10; i++) {
+                if ((i % 3) == 1) {
+                    html += '<tr>';
+                }
+
+                html += '<td>' + i + '</td>'
+
+
+                if ((i % 3) == 0) {
+                    html += '</tr>';
+                }
+
+            }
+            document.querySelector('#sample').innerHTML = html;
+            
+            button = document.querySelectorAll('td');
+            button[0].onclick(function(){
+                alert('1');
+            });
+        }
+     
+        
+
+    </script>
+</body>
+
+</html>
